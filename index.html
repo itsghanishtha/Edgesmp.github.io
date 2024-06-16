@@ -3,170 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <title>EDGE</title>
-<link rel="icon" type="image/x-icon" href="EDGE.ico">
+  <link rel="icon" type="image/x-icon" href="EDGE.ico">
   <style>
 
-html{
-cursor: url(https://cdn.custom-cursor.com/db/6722/32/minecraft-story-mode-jesse-and-enchanted-diamond-sword-cursor.png) , default !important;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
 }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 1%;
-      text-align: center;
-    }
-    p{
-          background-color: #7b7575;
-         margin: 0;
-         padding: 10px;
-         border-radius: 10px;
-         font-size: large;
-         text-align: center;
-    }
-    nav {
-        background-color: #a19d9d;
-      padding: 0px;
-      border-radius: 10px;
 
-    }
-    nav ul {
-        background-color: #444;
-      list-style: none;
-      margin: 0;
-      border-radius: 10px;
-      padding-bottom: 10px;
-      text-align: center;
-    }
-   nav ul li{
-    background-color: #a09999;
-padding-top: 50px;
-cursor: url(https://cdn.custom-cursor.com/db/6722/32/minecraft-story-mode-jesse-and-enchanted-diamond-sword-cursor.png) , default !important;
-border-radius: 10px;
-margin-bottom: 10px;
-transition: 0.1s;
-margin-top: 10px;
-padding-bottom: 50px;
-   }
-  
-    nav ul li a {
-      text-decoration: none;
-      margin: 10px;
-      color: #fff;
-    }
-    span{
-background-color: #fff8f8;
-padding:30px;
-color: black;
-border-radius: 10px;
-cursor: url(https://cdn.custom-cursor.com/db/6722/32/minecraft-story-mode-jesse-and-enchanted-diamond-sword-cursor.png) , default !important;
-transition: 0.1s;
-    }
-  span:hover{
-background-color: #3b3a3a;
+html {
+  cursor: url(https://cdn.custom-cursor.com/db/6722/32/minecraft-story-mode-jesse-and-enchanted-diamond-sword-cursor.png), default !important;
+}
 
-color: white;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+}
 
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1%;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+p {
+  background-color: #7b7575;
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: large;
+  text-align: center;
+}
+
+nav {
+  background-color: #a19d9d;
+  padding: 10px;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+
+nav ul {
+  background-color: #444;
+  list-style: none;
+  margin: 0;
+  border-radius: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul li {
+  background-color: #a09999;
+  padding: 20px;
+  cursor: url(https://cdn.custom-cursor.com/db/6722/32/minecraft-story-mode-jesse-and-enchanted-diamond-sword-cursor.png), default !important;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: 0.1s;
+  width: 100%;
+  text-align: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+span {
+  background-color: #fff8f8;
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
+  cursor: url(https://cdn.custom-cursor.com/db/6722/32/minecraft-story-mode-jesse-and-enchanted-diamond-sword-cursor.png), default !important;
+  transition: 0.1s;
+}
+
+span:hover {
+  background-color: #3b3a3a;
+  color: white;
+}
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%; /* You can adjust the width as needed */
-    background-color: #7b7979;
-    border-radius: 10px;
-    color: white;
-    transition: 0.1s;
-}
-  footer:hover{
-background-color: #fffbfb;
-color:#000000;
-  }
-  button{
-    float: right;
-    background-color: #7b7979;
-    color: floralwhite;
-    width: 100px;
-cursor: url(https://cdn.custom-cursor.com/db/6722/32/minecraft-story-mode-jesse-and-enchanted-diamond-sword-cursor.png) , default !important;
-    height: 80px;
-    border-radius: 10px;;
-    transition: 0.1s;
-  }
-  button:hover{
-background-color: #f4f4f4;
-cursor: url(https://cdn.custom-cursor.com/db/6722/32/minecraft-story-mode-jesse-and-enchanted-diamond-sword-cursor.png) , default !important;
-color: #000000;
-  }
-  img{
-    border-radius: 5px;
-height: 100%;
-width:100%;
-  }
- li:hover{
-background-color: rgb(111, 111, 117);
-animation: neon 0.9s alternate infinite;
-   }
-@keyframes neon{
-0%{
-border: 5px solid black;
-background-color: rgb(151, 111, 117);
-}
-50%{
-background-color: rgb(111, 151, 117);
-border: 5px solid black;
-}
-100%{
-background-color: rgb(111, 111, 157);
-border: 5px solid black;
+  background-color: #7b7979;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  flex-shrink: 0;
+  transition: 0.1s;
 }
 
-
+footer:hover {
+  background-color: #fffbfb;
+  color: #000000;
 }
 
-    </style>
+button {
+  background-color: #7b7979;
+  color: floralwhite;
+  width: 100px;
+  height: 80px;
+  border-radius: 10px;
+  transition: 0.1s;
+  border: none;
+  cursor: url(https://cdn.custom-cursor.com/db/6722/32/minecraft-story-mode-jesse-and-enchanted-diamond-sword-cursor.png), default !important;
+}
+
+button:hover {
+  background-color: #f4f4f4;
+  color: #000000;
+}
+
+img {
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+li:hover {
+  background-color: rgb(111, 111, 117);
+  animation: neon 0.9s alternate infinite;
+}
+
+@keyframes neon {
+  0% {
+    border: 5px solid black;
+    background-color: rgb(151, 111, 117);
+  }
+  50% {
+    background-color: rgb(111, 151, 117);
+    border: 5px solid black;
+  }
+  100% {
+    background-color: rgb(111, 111, 157);
+    border: 5px solid black;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    padding: 15px;
+  }
+
+  button {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    flex: 1 1 45%;
+    margin: 10px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    flex: 1;
+    margin: 10px;
+  }
+}
+  </style>
 </head>
 <body>
   <header>
-   
-    <button onclick=""><img src="EDGE.ico" alt="licon"> </button>
+    <button onclick=""><img src="EDGE.ico" alt="licon"></button>
     <h1>LET'S PLAY TOGETHER</h1>
-   
   </header>
-  <p><b>
-    EDGE SMP
-</p></b>
+  <p><b>EDGE SMP</b></p>
   <nav>
-     
-         <ul>    <li><a href="chat.html"><span>CHAT BOX</span></a></li> </ul>
-   
-      <ul>
-       
-        <li><a href="server.html"><span>SERVER 🖥️</span></a></li>
-            <li><a href="Guide.html"><span> GUIDE 📖</span></a></li>
-        <li><a href="player.html"><span>PLAYERS 👬</span></a></li>
-        <li><a href="freekit.html"><span>FREE KITS 🏆</span></a></li>
-        <li><a href="glitches.html"><span>GLITCHES 👾</span></a></li>
-      
-      </ul>
+    <ul>
+      <li><a href="chat.html"><span>CHAT BOX</span></a></li>
+      <li><a href="server.html"><span>SERVER 🖥️</span></a></li>
+      <li><a href="Guide.html"><span>GUIDE 📖</span></a></li>
+      <li><a href="player.html"><span>PLAYERS 👬</span></a></li>
+      <li><a href="freekit.html"><span>FREE KITS 🏆</span></a></li>
+      <li><a href="glitches.html"><span>GLITCHES 👾</span></a></li>
+    </ul>
   </nav>
-  <br>
-
   <footer>
     <p>&copy; EDGESMP -- Designed by Kri5ant/Gilt1x</p>
   </footer>
   <script>
-      document.addEventListener("contextmenu", (event) => {
-         event.preventDefault();
-      });
-   </script>
+    document.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
+  </script>
 </body>
 </html>
